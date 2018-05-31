@@ -20,7 +20,6 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout alloc];
-    layout.minimumLineSpacing = 5;
     ViewController *controller = [[ViewController alloc] initWithCollectionViewLayout : layout];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:(controller)];
     return YES;
