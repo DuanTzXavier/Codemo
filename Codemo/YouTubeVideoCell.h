@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YouTubeVideoCell.h
 //  Codemo
 //
 //  Created by dtz段天章 on 2018/5/31.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UICollectionViewController<UICollectionViewDelegateFlowLayout>
+@interface YouTubeVideoCell : UICollectionViewCell
 
 @end
-

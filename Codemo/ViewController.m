@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "YouTubeVideoCell.h"
 
-@interface ViewController ()
+@interface ViewController()
 
 @end
 
@@ -16,13 +17,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Hello,world";
     // Do any additional setup after loading the view, typically from a nib.
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    [self.collectionView registerClass:YouTubeVideoCell.self forCellWithReuseIdentifier:(@"HelloCellID")];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 4;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HelloCellID" forIndexPath:indexPath];
+//    cell.backgroundColor = [UIColor blueColor];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.view.frame.size.width, 200);
 }
 
 

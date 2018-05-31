@@ -13,6 +13,7 @@
 		2CAF940A20BFA0200091F183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF940920BFA0200091F183 /* Assets.xcassets */; };
 		2CAF940D20BFA0200091F183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF940B20BFA0200091F183 /* LaunchScreen.storyboard */; };
 		2CAF941020BFA0200091F183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF940F20BFA0200091F183 /* main.m */; };
+		2CAF941820C011310091F183 /* YouTubeVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF941720C011310091F183 /* YouTubeVideoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		2CAF940C20BFA0200091F183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CAF940E20BFA0200091F183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CAF940F20BFA0200091F183 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CAF941620C011310091F183 /* YouTubeVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeVideoCell.h; sourceTree = "<group>"; };
+		2CAF941720C011310091F183 /* YouTubeVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouTubeVideoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				2CAF940B20BFA0200091F183 /* LaunchScreen.storyboard */,
 				2CAF940E20BFA0200091F183 /* Info.plist */,
 				2CAF940F20BFA0200091F183 /* main.m */,
+				2CAF941620C011310091F183 /* YouTubeVideoCell.h */,
+				2CAF941720C011310091F183 /* YouTubeVideoCell.m */,
 			);
 			path = Codemo;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CAF940520BFA0200091F183 /* ViewController.m in Sources */,
+				2CAF941820C011310091F183 /* YouTubeVideoCell.m in Sources */,
 				2CAF941020BFA0200091F183 /* main.m in Sources */,
 				2CAF940220BFA0200091F183 /* AppDelegate.m in Sources */,
 			);
