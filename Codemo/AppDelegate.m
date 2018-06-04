@@ -22,6 +22,14 @@
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout alloc];
     ViewController *controller = [[ViewController alloc] initWithCollectionViewLayout : layout];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:(controller)];
+    UINavigationBar.appearance.barTintColor = [UIColor colorWithRed:239/255.0 green:32/255.0 blue:31/255.0 alpha:1];
+    
+    UIView *statusBar = [[UIView alloc] init];
+    statusBar.backgroundColor = [UIColor colorWithRed:194/255.0 green:31/255.0 blue:31/255.0 alpha:1];
+    [self.window addSubview:statusBar];
+    [self.window addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[statusBar]|" options:0 metrics:NULL views:NSDictionaryOfVariableBindings(statusBar)]];
+    [self.window addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[statusBar(20)]|" options:0 metrics:NULL views:NSDictionaryOfVariableBindings(statusBar)]];
+
     return YES;
 }
 

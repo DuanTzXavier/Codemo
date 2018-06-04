@@ -15,15 +15,19 @@
 
 UIImageView *(^mVideoThumbnailView) (void) =  ^() {
     UIImageView *x = [[UIImageView alloc] init];
-    x.backgroundColor = [UIColor greenColor];
+    x.image = [UIImage imageNamed:@"yilidan"];
     x.translatesAutoresizingMaskIntoConstraints = false;
+    x.contentMode = UIViewContentModeScaleAspectFill;
+    x.clipsToBounds = true;
     return x;
 };
 
 UIImageView *(^mUserImageView) (void) =  ^() {
     UIImageView *x = [[UIImageView alloc] init];
-    x.backgroundColor = [UIColor blueColor];
+    x.image = [UIImage imageNamed:@"pufan2"];
     x.translatesAutoresizingMaskIntoConstraints = false;
+    x.layer.cornerRadius = 22;
+    x.layer.masksToBounds = true;
     return x;
 };
 
@@ -37,15 +41,18 @@ UIView *(^mSeparatorView) (void) =  ^() {
 
 UILabel *(^mTiTleLabel) (void) = ^() {
     UILabel *x = [[UILabel alloc] init];
-    x.backgroundColor = [UIColor orangeColor];
+    x.text = @"WestLife - You Raise Me Up";
     x.translatesAutoresizingMaskIntoConstraints = false;
     return x;
 };
 
 UITextView *(^mSubTitleView) (void) = ^() {
     UITextView *x = [[UITextView alloc] init];
-    x.backgroundColor = [UIColor cyanColor];
     x.translatesAutoresizingMaskIntoConstraints = false;
+    x.userInteractionEnabled = false;
+    x.text = @"westlifeVEVO * 40,648,585 views";
+    x.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0);
+    x.textColor = [UIColor colorWithRed:160/255.0 green:160/255.0 blue:160/255.0 alpha:1];
     return x;
 };
 
@@ -94,4 +101,5 @@ UITextView *(^mSubTitleView) (void) = ^() {
 - (void) addConstraintsWithVisualFormat:(NSString *) format views:(NSDictionary<NSString *, id> *)views{
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:format options:0 metrics:NULL views:views]];
 }
+
 @end
